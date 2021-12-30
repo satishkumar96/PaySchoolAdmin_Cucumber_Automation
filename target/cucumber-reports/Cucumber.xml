@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="47.784">
+    <testcase classname="validate Login Page" name="Title of Login Page" time="0.303">
+        <system-out>
+            <![CDATA[When Login Page Display.....................................................passed
+Then fetch login page title.................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="validate Login Page" name="Validate bar menu" time="8.286">
+        <system-out>
+            <![CDATA[When Login Page Display.....................................................passed
+Then click on bar menu icon.................................................passed
+And click on each Tab.......................................................passed
+And click on Back to SignIn Page............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="validate Login Page" name="do positive login" time="18.594">
+        <system-out>
+            <![CDATA[When username and password field are display................................passed
+And enter "chimerasa" and "Test2021"........................................passed
+And click on Login button...................................................passed
+Then homepage should display................................................passed
+And perform logout..........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="validate Login Page" name="do Negative Login" time="3.953">
+        <system-out>
+            <![CDATA[When username and password field are display................................passed
+And enter "chimerasa" and "Test202".........................................passed
+And click on Login button...................................................passed
+Then error message should display...........................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
