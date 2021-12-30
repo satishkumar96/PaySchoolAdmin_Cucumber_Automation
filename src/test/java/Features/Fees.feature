@@ -15,3 +15,28 @@ Feature: Validate end to end testing on Admin. Manage fees
     When mouse over to Fees
     And mouse over to Administration
     Then Select Manage Fees
+
+  Scenario: verify search text box
+    Given user is on Manage Fees page
+    When Search text box display
+    And enter "test" in text box
+    Then click on first school
+
+  Scenario: select first school
+    When user click on first school
+    And click on Edit Action button
+    Then choose fee type window displayed
+    And select Assigned Fees
+    And click start button
+
+  Scenario: verify Required Information
+    Given user is on Required Information page
+    When user edit fee name, fee description and fee code
+    And validate fee category and fee type
+    Then click on next button
+
+  Scenario: verify Amount & Installation
+    Given user is on Amount & Installation page
+    When user validate fixed field
+    And validate Tiered field
+    Then click on next button
