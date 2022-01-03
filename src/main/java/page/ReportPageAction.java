@@ -48,7 +48,7 @@ public class ReportPageAction {
 	public void enterfield() throws Throwable {
 		readExcel re = new readExcel();
 		
-		for(int i=1;i<=re.getPatronSheet().getLastRowNum();i++) {
+		for(int i=1;i<=5;i++) {
 			bp.ClearTextField(rpl.getLastName());
 			bp.SendKeys(rpl.getLastName(), re.getPatronSheet().getRow(i).getCell(5).getStringCellValue());
 			bp.ClearTextField(rpl.getFirstName());

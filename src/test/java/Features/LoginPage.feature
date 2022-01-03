@@ -30,4 +30,4 @@ Feature: validate Login Page
 
     Examples: 
       | username  | password |
-      | chimerasa | Test202 |
+      | chimerasa | Test202  |

@@ -94,4 +94,7 @@ public class BasePage {
 
 		return act;
 	}
+	public boolean elementStatus(String xpathValue) {
+		return environment.driver.findElement(By.xpath(xpathValue)).isEnabled();
+	}
 }

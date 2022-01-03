@@ -117,4 +117,9 @@ public class HomePageSteps {
 	@Then("click on Add All button")
 	public void click_on_Add_All_button() throws Throwable {
 	}
+	
+	@Then("click on Home Tab")
+	public void click_on_Home_Tab() throws Throwable {
+		hpa.clickHomeTab();
+	}
 }

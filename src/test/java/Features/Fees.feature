@@ -39,4 +39,6 @@ Feature: Validate end to end testing on Admin. Manage fees
     Given user is on Amount & Installation page
     When user validate fixed field
     And validate Tiered field
+    And validate Variable filed
     Then click on next button
+    And go to Home Page

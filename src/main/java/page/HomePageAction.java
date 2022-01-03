@@ -16,7 +16,11 @@ public class HomePageAction {
 	}
 
 	public void performLogout() throws Throwable {
-		
+
+		do {
+			bp.ActionClass(hpl.getRightArrow()).perform();
+		}while(bp.displayElement(hpl.getLogoutTab()));
+
 		bp.clickElement(hpl.getLogoutTab());
 
 		Robot robot = new Robot();
@@ -25,7 +29,7 @@ public class HomePageAction {
 
 		Thread.sleep(5000);
 	}
-	
+
 	public void mouseOverPatrons() throws Throwable {
 		bp.ActionClass(hpl.getPatronsTab()).perform();
 	}
@@ -33,10 +37,10 @@ public class HomePageAction {
 	public void selectSearchPatron() throws Throwable {
 		bp.clickElement(hpl.getSearchPatrons());
 	}
-	
+
 	public void checkSearchInputBox() throws Throwable {
 		boolean searchInputBox = bp.displayElement(hpl.getSearchInputBBox());
-		
+
 		if(searchInputBox == true)
 		{
 			System.out.println("Search Box display" +searchInputBox);
@@ -45,14 +49,18 @@ public class HomePageAction {
 		{
 			System.out.println("Search box not display");
 		}
-		
+
 	}
-	
+
 	public void enterPatronName() throws Throwable {
 		bp.SendKeys(hpl.getSearchInputBBox(), hpl.getPatronName());
 	}
-	
+
 	public void clickSearchButton() throws Throwable {
 		bp.clickElement(hpl.getSearchButton());
+	}
+
+	public void clickHomeTab() throws Throwable {
+		bp.clickElement(hpl.getHomeTab());
 	}
 }
