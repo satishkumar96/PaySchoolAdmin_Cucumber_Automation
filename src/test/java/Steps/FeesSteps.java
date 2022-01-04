@@ -87,7 +87,7 @@ public class FeesSteps {
 	@When("user edit fee name, fee description and fee code")
 	public void user_edit_fee_name_fee_description_and_fee_code() throws Throwable {
 		fpa.enterFeeName();
-//		fpa.enterFeeCode();
+		//		fpa.enterFeeCode();
 		fpa.enterFeeDescription();
 		Thread.sleep(3000);
 	}
@@ -97,23 +97,26 @@ public class FeesSteps {
 		fpa.clickFeeCategory();
 		fpa.enterFeeCategoryName();
 		fpa.enterFeeCategoryDescription();
-		
+
 		Thread.sleep(3000);
 
-		fpa.clickFeeType();
-		fpa.enterFeeTypeName();
-		fpa.enterFeeTypeDescription();
-		fpa.enterDeniedPrice();
-		fpa.enterFreePrice();
-		fpa.enterReducedPrice();
-		fpa.clickSaveButton();
-		Thread.sleep(3000);
+		//		fpa.clickFeeType();
+		//		fpa.enterFeeTypeName();
+		//		fpa.enterFeeTypeDescription();
+		//		fpa.enterDeniedPrice();
+		//		fpa.enterFreePrice();
+		//		fpa.enterReducedPrice();
+		//		fpa.verifyFreePriceButtons();
+		//		fpa.verifyReducedPriceButtons();
+		//		fpa.verifyDeniedPriceButtons();
+		//		fpa.clickSaveButton();
+		//		Thread.sleep(3000);
 	}
 
 	@Then("click on next button")
 	public void click_on_next_button() throws Throwable {
 		fpa.clickNextButton();
-		
+
 	}
 
 	@Given("user is on Amount & Installation page")
@@ -130,12 +133,12 @@ public class FeesSteps {
 	}
 
 	@When("validate Tiered field")
-public void validate_tiered_field() throws Throwable {
+	public void validate_tiered_field() throws Throwable {
 		fpa.clickTieredButton();
 		fpa.enterFree();
 		fpa.enterReduced();
 		fpa.enterDenied();
-		
+
 		fpa.verifyFreeButtons();
 		fpa.verifyReducedButtons();
 		fpa.verifyDeniedButtons();

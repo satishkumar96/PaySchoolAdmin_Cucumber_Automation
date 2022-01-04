@@ -32,7 +32,11 @@ public class FeePageAction {
 		return bp.displayElement(fl.getSearchTextBoc());
 	}
 	public void enterInSearchBox(String searchText) throws Throwable {
+		bp.ClearTextField(fl.getSearchTextBoc());
 		bp.SendKeys(fl.getSearchTextBoc(), searchText);
+
+		Thread.sleep(2000);
+		bp.ClearTextField(fl.getSearchTextBoc());
 	}
 	public void clickFirstSchool() throws Throwable {
 		bp.clickElement(fl.getFirstSchool());
@@ -45,7 +49,7 @@ public class FeePageAction {
 	}
 	public void selectAssignedFees() throws Throwable {
 		bp.clickElement(fl.getAssignedFees());
-//		bp.clickElement(fl.getYesButton());
+		//		bp.clickElement(fl.getYesButton());
 
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
@@ -103,6 +107,7 @@ public class FeePageAction {
 	public void enterReducedPrice() throws Throwable {
 		bp.ClearTextField(fl.getReducedPrice());
 		bp.SendKeys(fl.getReducedPrice(), "90");
+
 	}
 	public void enterFreePrice() throws Throwable {
 		bp.ClearTextField(fl.getFreePrice());
@@ -116,6 +121,12 @@ public class FeePageAction {
 	}
 	public void verifyFreePriceButtons() throws Throwable {
 		bp.clickListOfElements(fl.getFreePriceButtons());
+
+
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_ESCAPE);
+		robot.keyRelease(KeyEvent.VK_ESCAPE);
+
 	}
 	public void clickSaveButton() throws Throwable {
 
@@ -130,10 +141,10 @@ public class FeePageAction {
 		}
 	}
 	public void clickNextButton() throws Throwable {
-		bp.clickElement(fl.getNextButton());
-		
+		bp.ActionClass(fl.getNextButton()).click().click().perform();
+
 		Thread.sleep(3000);
-		
+
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_HOME);
@@ -186,7 +197,7 @@ public class FeePageAction {
 	public void getVariableText() throws Throwable {
 		bp.getElementText(fl.getVariableText());
 	}
-	
+
 	public void goToHomePage() throws Throwable {
 		bp.clickElement(fl.getHomeButton());
 	}

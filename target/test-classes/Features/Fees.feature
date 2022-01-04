@@ -19,7 +19,7 @@ Feature: Validate end to end testing on Admin. Manage fees
   Scenario: verify search text box
     Given user is on Manage Fees page
     When Search text box display
-    And enter "test" in text box
+    #And enter "test" in text box
     Then click on first school
 
   Scenario: select first school
