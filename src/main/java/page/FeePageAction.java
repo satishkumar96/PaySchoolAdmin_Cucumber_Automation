@@ -49,8 +49,13 @@ public class FeePageAction {
 	}
 	public void selectAssignedFees() throws Throwable {
 		bp.clickElement(fl.getAssignedFees());
-		//		bp.clickElement(fl.getYesButton());
-
+		
+		Thread.sleep(3000);
+		
+//		bp.clickElement(fl.getYesButton());
+		
+		Thread.sleep(3000);
+		
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_END);

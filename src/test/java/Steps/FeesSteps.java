@@ -103,17 +103,17 @@ public class FeesSteps {
 
 		Thread.sleep(3000);
 
-		//		fpa.clickFeeType();
-		//		fpa.enterFeeTypeName();
-		//		fpa.enterFeeTypeDescription();
-		//		fpa.enterDeniedPrice();
-		//		fpa.enterFreePrice();
-		//		fpa.enterReducedPrice();
-		//		fpa.verifyFreePriceButtons();
-		//		fpa.verifyReducedPriceButtons();
-		//		fpa.verifyDeniedPriceButtons();
-		//		fpa.clickSaveButton();
-		//		Thread.sleep(3000);
+//				fpa.clickFeeType();
+//				fpa.enterFeeTypeName();
+//				fpa.enterFeeTypeDescription();
+//				fpa.enterDeniedPrice();
+//				fpa.enterFreePrice();
+//				fpa.enterReducedPrice();
+//				fpa.verifyFreePriceButtons();
+//				fpa.verifyReducedPriceButtons();
+//				fpa.verifyDeniedPriceButtons();
+//				fpa.clickSaveButton();
+//				Thread.sleep(3000);
 	}
 
 	@Then("click on next button")
