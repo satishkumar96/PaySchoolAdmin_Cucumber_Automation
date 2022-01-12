@@ -83,6 +83,6 @@ public class LoginPageSteps {
 	}
 	@Then("Terms and Condition should be visible")
 	public void terms_and_condition_visible() throws Throwable {
-		lpa.getTermsCondition();
+		lpa.getTermsConditin();
 	}
 }
