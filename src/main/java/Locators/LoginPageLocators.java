@@ -44,7 +44,14 @@ public class LoginPageLocators {
 	public String getInvalidErrorMessage() throws Throwable {
 		String InvalidErrorMessage = bp.LoginPageCellValue(7, 1);
 		return InvalidErrorMessage;
-		
-		
+	}
+	public String getPasswordResetButton() throws Throwable {
+		return bp.LoginPageCellValue(8, 1);
+	}
+	public String getPrivacyPolicy() throws Throwable {
+		return bp.LoginPageCellValue(9, 1);
+	}
+	public String getTermsCondition() throws Throwable {
+		return bp.LoginPageCellValue(10, 1);
 	}
 }

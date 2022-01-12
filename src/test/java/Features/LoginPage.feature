@@ -5,6 +5,23 @@ Feature: validate Login Page
     When Login Page Display
     Then fetch login page title
 
+  Scenario: Verify Password Reset button is visible
+    When Login Page Display
+    Then password reset button should be visible
+
+  Scenario: Verify Password Reset button is clickable
+    When Login Page Display
+    Then password reset button should be clickable
+    And click on Back to SignIn Page
+
+  Scenario: Verify Privacy Policy is visible
+    When Login Page Display
+    Then Privacy Policy should be visible
+
+  Scenario: Verify Terms and Condition is visible
+    When Login Page Display
+    Then Terms and Condition should be visible
+
   Scenario: Validate bar menu
     When Login Page Display
     Then click on bar menu icon
