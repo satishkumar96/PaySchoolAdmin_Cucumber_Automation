@@ -22,16 +22,19 @@ public class FeesSteps {
 	@When("mouse over to Fees")
 	public void mouse_over_to_Fees() throws Throwable {
 		fpa.mouseOverFeesTab();
+		Thread.sleep(3000);
 	}
 
 	@And("mouse over to Administration")
 	public void mouse_over_to_Administration() throws Throwable {
 		fpa.mouseOverAdminOption();
+		Thread.sleep(3000);
 	}
 
 	@Then("Select Manage Fees")
 	public void Select_Manage_Fees() throws Throwable {
 		fpa.selectManageFees();
+		Thread.sleep(3000);
 	}
 
 	@Given("user is on Manage Fees page")
