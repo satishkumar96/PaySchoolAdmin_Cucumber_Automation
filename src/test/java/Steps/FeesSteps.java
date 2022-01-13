@@ -156,7 +156,7 @@ public class FeesSteps {
 	@Then("go to Home Page")
 	public void go_to_Home_Page() throws Throwable {
 		fpa.goToHomePage();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 	}
 
 }

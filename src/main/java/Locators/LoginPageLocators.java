@@ -52,6 +52,6 @@ public class LoginPageLocators {
 		return bp.LoginPageCellValue(9, 1);
 	}
 	public String getTermsCondition() throws Throwable {
-		return bp.LoginPageCellValue(11, 1);
+		return bp.LoginPageCellValue(10, 1);
 	}
 }

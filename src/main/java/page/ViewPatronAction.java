@@ -40,15 +40,19 @@ public class ViewPatronAction {
 	}
 	
 	public void checkDropDown() throws Throwable {
-		bp.clickElement(vpl.getItemGroupsNotAllowed());
+		bp.ActionClass(vpl.getItemGroupsNotAllowed()).click().perform();
+		Thread.sleep(2000);
 		bp.clickListOfElements(vpl.getItemGroupsNotAllowedList());
-		bp.clickElement(vpl.getItemGroupsNotAllowed());
+		Thread.sleep(2000);
+		bp.ActionClass(vpl.getItemGroupsNotAllowed()).click().perform();
 		
 		Thread.sleep(3000);
 		
-		bp.clickElement(vpl.getItemsNotAllowed());
+		bp.ActionClass(vpl.getItemsNotAllowed()).click().perform();
+		Thread.sleep(2000);
 		bp.clickListOfElements(vpl.getItemsNotAllowedList());
-		bp.clickElement(vpl.getItemsNotAllowed());
+		Thread.sleep(2000);
+		bp.ActionClass(vpl.getItemsNotAllowed()).click().perform();
 	}
 	
 	public void clickReport() throws Throwable {
