@@ -1,84 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="21" time="238.747">
-<testcase classname="Validate end to end testing on Admin. Manage fees" name="Validate Fees tab" time="15.085">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="15" time="174.899">
+<testcase classname="Validate End to End testing on Home Page" name="Validate Patron tab" time="16.153">
 <system-out><![CDATA[When username and password field are display................................passed
 And enter "chimerasa" and "Test2021"........................................passed
 And click on Login button...................................................passed
 Then homepage should display................................................passed
-Then verify Fees Tab........................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Validate end to end testing on Admin. Manage fees" name="Go to Admin Manage Fees" time="21.759">
-<system-out><![CDATA[When mouse over to Fees.....................................................passed
-And mouse over to Administration............................................passed
-Then Select Manage Fees.....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Validate end to end testing on Admin. Manage fees" name="verify search text box" time="0.668">
-<system-out><![CDATA[Given user is on Manage Fees page...........................................passed
-When Search text box display................................................passed
-Then click on first school..................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Validate end to end testing on Admin. Manage fees" name="select first school" time="16.244">
-<system-out><![CDATA[When user click on first school.............................................passed
-And click on Edit Action button.............................................passed
-Then choose fee type window displayed.......................................passed
-And select Assigned Fees....................................................passed
-And click start button......................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Validate end to end testing on Admin. Manage fees" name="verify Required Information" time="14.113">
-<system-out><![CDATA[Given user is on Required Information page..................................passed
-When user edit fee name, fee description and fee code.......................passed
-And validate fee category and fee type......................................passed
-Then click on next button...................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Validate end to end testing on Admin. Manage fees" name="verify Amount &amp; Installation" time="18.452">
-<system-out><![CDATA[Given user is on Amount & Installation page.................................passed
-When user validate fixed field..............................................passed
-And validate Tiered field...................................................passed
-And validate Variable filed.................................................passed
-Then click on next button...................................................passed
-And go to Home Page.........................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Validate End to End testing on Home Page" name="Validate Patron tab" time="1.004">
-<system-out><![CDATA[Then homepage should display................................................passed
 And mouse over to Patron....................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Validate End to End testing on Home Page" name="Select Search Patron" time="5.721">
+<testcase classname="Validate End to End testing on Home Page" name="Select Search Patron" time="4.78">
 <system-out><![CDATA[Given select Search Patron..................................................passed
 When Search Box visible.....................................................passed
 Then enter Patron Name or ID................................................passed
 And click search button.....................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Validate End to End testing on Home Page" name="Select first patron" time="5.686">
+<testcase classname="Validate End to End testing on Home Page" name="Select first patron" time="5.342">
 <system-out><![CDATA[Given After user is on view patron page.....................................passed
 When first patron display...................................................passed
 Then click on first patron..................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Validate End to End testing on Home Page" name="Quick Lunch Restriction" time="23.315">
+<testcase classname="Validate End to End testing on Home Page" name="Quick Lunch Restriction" time="23.191">
 <system-out><![CDATA[When Select Quick Lunch Restriction button..................................passed
 Then Validate each fields...................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Validate End to End testing on Home Page" name="Validate Report Tab" time="8.376">
+<testcase classname="Validate End to End testing on Home Page" name="Validate Report Tab" time="9.801">
 <system-out><![CDATA[Given check Report tab is visible and clickable.............................passed
 Then click on Report Tab....................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Validate End to End testing on Home Page" name="Go to Patron Account Activity" time="12.042">
+<testcase classname="Validate End to End testing on Home Page" name="Go to Patron Account Activity" time="13.236">
 <system-out><![CDATA[Given mouse over to Patron Tab..............................................passed
 And mouse over to Account Reports...........................................passed
 Then Select Patron Account Activity.........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Validate End to End testing on Home Page" name="Generate Report" time="31.794">
+<testcase classname="Validate End to End testing on Home Page" name="Generate Report" time="32.071">
 <system-out><![CDATA[Given user is on report page................................................passed
 When click on patron tab....................................................passed
 And enter patronID, Last name and first name................................passed
@@ -88,40 +47,40 @@ And click on Home Tab.......................................................pass
 And perform logout..........................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="validate Login Page" name="Title of Login Page" time="1.565">
+<testcase classname="validate Login Page" name="Title of Login Page" time="1.637">
 <system-out><![CDATA[When Login Page Display.....................................................passed
 Then fetch login page title.................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="validate Login Page" name="Verify Password Reset button is visible" time="1.585">
+<testcase classname="validate Login Page" name="Verify Password Reset button is visible" time="1.563">
 <system-out><![CDATA[When Login Page Display.....................................................passed
 Then password reset button should be visible................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="validate Login Page" name="Verify Password Reset button is clickable" time="5.343">
+<testcase classname="validate Login Page" name="Verify Password Reset button is clickable" time="5.484">
 <system-out><![CDATA[When Login Page Display.....................................................passed
 Then password reset button should be clickable..............................passed
 And click on Back to SignIn Page............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="validate Login Page" name="Verify Privacy Policy is visible" time="1.553">
+<testcase classname="validate Login Page" name="Verify Privacy Policy is visible" time="1.682">
 <system-out><![CDATA[When Login Page Display.....................................................passed
 Then Privacy Policy should be visible.......................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="validate Login Page" name="Verify Terms and Condition is visible" time="1.581">
+<testcase classname="validate Login Page" name="Verify Terms and Condition is visible" time="1.58">
 <system-out><![CDATA[When Login Page Display.....................................................passed
 Then Terms and Condition should be visible..................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="validate Login Page" name="Validate bar menu" time="7.652">
+<testcase classname="validate Login Page" name="Validate bar menu" time="6.194">
 <system-out><![CDATA[When Login Page Display.....................................................passed
 Then click on bar menu icon.................................................passed
 And click on each Tab.......................................................passed
 And click on Back to SignIn Page............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="validate Login Page" name="do positive login" time="18.076">
+<testcase classname="validate Login Page" name="do positive login" time="18.059">
 <system-out><![CDATA[When username and password field are display................................passed
 And enter "chimerasa" and "Test2021"........................................passed
 And click on Login button...................................................passed
@@ -129,7 +88,7 @@ Then homepage should display................................................pass
 And perform logout..........................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="validate Login Page" name="do Negative Login" time="6.607">
+<testcase classname="validate Login Page" name="do Negative Login" time="5.986">
 <system-out><![CDATA[When username and password field are display................................passed
 And enter "chimerasa" and "Test202".........................................passed
 And click on Login button...................................................passed

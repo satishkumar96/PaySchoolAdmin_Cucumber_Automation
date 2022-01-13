@@ -1,9 +1,9 @@
 Feature: Validate End to End testing on Home Page
 
   Scenario Outline: Validate Patron tab
-    #When username and password field are display
-    #And enter "<username>" and "<password>"
-    #And click on Login button
+    When username and password field are display
+    And enter "<username>" and "<password>"
+    And click on Login button
     Then homepage should display
     And mouse over to Patron
 
