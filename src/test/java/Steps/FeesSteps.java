@@ -46,11 +46,6 @@ public class FeesSteps {
 		Assert.assertTrue(fpa.verifySearchBox());
 	}
 
-	@When("enter {string} in text box")
-	public void enter_in_text_box(String string) throws Throwable {
-		fpa.enterInSearchBox(string);
-	}
-
 	@Then("click on first school")
 	public void click_on_first_school() throws Throwable {
 		fpa.clickFirstSchool();
