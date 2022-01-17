@@ -52,9 +52,9 @@ public class FeePageAction {
 		
 		Thread.sleep(3000);
 		
-//		bp.clickElement(fl.getYesButton());
+		bp.clickElement(fl.getYesButton());
 		
-//		Thread.sleep(3000);
+		Thread.sleep(3000);
 		
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
