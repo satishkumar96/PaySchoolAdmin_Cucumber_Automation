@@ -1,4 +1,211 @@
 -------------------------------------------------------------------------------
 Test set: testRunner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 345.277 s - in testRunner.TestRunner
+Tests run: 21, Failures: 0, Errors: 16, Skipped: 0, Time elapsed: 662.95 s <<< FAILURE! - in testRunner.TestRunner
+Validate end to end testing on Admin. Manage fees.select first school  Time elapsed: 8.403 s  <<< ERROR!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <div _ngcontent-lcn-c222="" class="cursor-pointer fc-wrapper-active" ng-reflect-ng-class="[object Object]">...</div> is not clickable at point (535, 417). Other element would receive the click: <div _ngcontent-lcn-c240="" id="overlay" class="ng-star-inserted"></div>
+  (Session info: chrome=97.0.4692.71)
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'SATISHKUMAR', ip: '172.21.80.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_302'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4aa1199fbd03464ab9656fd8cf2306c4, clickElement {id=efa183ba-d87f-45ed-9bcf-2a663ba5a9b5}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\SATISH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65216}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65216/devtoo..., se:cdpVersion: 97.0.4692.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (4aa1199fbd03464ab9656fd8cf2306c4)] -> xpath: //div[@class='fc-outer-wrapper']/div[1]]
+Session ID: 4aa1199fbd03464ab9656fd8cf2306c4
+
+Validate end to end testing on Admin. Manage fees.verify Required Information  Time elapsed: 20.421 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for common.BasePage$$Lambda$736/1264191370@4f654cee (tried for 20 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name='feeName']"}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'SATISHKUMAR', ip: '172.21.80.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_302'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4aa1199fbd03464ab9656fd8cf2306c4, findElement {using=xpath, value=//input[@name='feeName']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\SATISH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65216}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65216/devtoo..., se:cdpVersion: 97.0.4692.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4aa1199fbd03464ab9656fd8cf2306c4
+
+Validate end to end testing on Admin. Manage fees.verify Amount & Installation  Time elapsed: 20.399 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for common.BasePage$$Lambda$736/1264191370@726934e2 (tried for 20 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//a[@id='pills-fixed-tab']"}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'SATISHKUMAR', ip: '172.21.80.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_302'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4aa1199fbd03464ab9656fd8cf2306c4, findElement {using=xpath, value=//a[@id='pills-fixed-tab']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\SATISH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65216}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65216/devtoo..., se:cdpVersion: 97.0.4692.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4aa1199fbd03464ab9656fd8cf2306c4
+
+Validate End to End testing on Home Page.Validate Patron tab  Time elapsed: 22.143 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for common.BasePage$$Lambda$736/1264191370@68dd39d2 (tried for 20 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='ctl00_RadMenuMain']/div/ul/li[2]/a"}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'SATISHKUMAR', ip: '172.21.80.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_302'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4aa1199fbd03464ab9656fd8cf2306c4, findElement {using=xpath, value=//div[@id='ctl00_RadMenuMain']/div/ul/li[2]/a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\SATISH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65216}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65216/devtoo..., se:cdpVersion: 97.0.4692.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4aa1199fbd03464ab9656fd8cf2306c4
+
+Validate End to End testing on Home Page.Select Search Patron  Time elapsed: 20.427 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for common.BasePage$$Lambda$736/1264191370@59b32539 (tried for 20 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//a[@title='Search Patrons']"}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'SATISHKUMAR', ip: '172.21.80.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_302'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4aa1199fbd03464ab9656fd8cf2306c4, findElement {using=xpath, value=//a[@title='Search Patrons']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\SATISH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65216}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65216/devtoo..., se:cdpVersion: 97.0.4692.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4aa1199fbd03464ab9656fd8cf2306c4
+
+Validate End to End testing on Home Page.Select first patron  Time elapsed: 21.015 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for common.BasePage$$Lambda$736/1264191370@50a13c2f (tried for 20 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//tr[@id='ctl00_ContentBody_rgPatronSearchResults_ctl00__0']/td[2]/a"}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'SATISHKUMAR', ip: '172.21.80.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_302'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4aa1199fbd03464ab9656fd8cf2306c4, findElement {using=xpath, value=//tr[@id='ctl00_ContentBody_rgPatronSearchResults_ctl00__0']/td[2]/a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\SATISH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65216}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65216/devtoo..., se:cdpVersion: 97.0.4692.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4aa1199fbd03464ab9656fd8cf2306c4
+
+Validate End to End testing on Home Page.Quick Lunch Restriction  Time elapsed: 20.343 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for common.BasePage$$Lambda$736/1264191370@427a12b6 (tried for 20 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='QuikLunch Restrictions']"}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'SATISHKUMAR', ip: '172.21.80.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_302'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4aa1199fbd03464ab9656fd8cf2306c4, findElement {using=xpath, value=//span[text()='QuikLunch Restrictions']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\SATISH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65216}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65216/devtoo..., se:cdpVersion: 97.0.4692.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4aa1199fbd03464ab9656fd8cf2306c4
+
+Validate End to End testing on Home Page.Validate Report Tab  Time elapsed: 20.383 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for common.BasePage$$Lambda$736/1264191370@1727e03a (tried for 20 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//a[@title='View reports.']"}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'SATISHKUMAR', ip: '172.21.80.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_302'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4aa1199fbd03464ab9656fd8cf2306c4, findElement {using=xpath, value=//a[@title='View reports.']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\SATISH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65216}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65216/devtoo..., se:cdpVersion: 97.0.4692.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4aa1199fbd03464ab9656fd8cf2306c4
+
+Validate End to End testing on Home Page.Go to Patron Account Activity  Time elapsed: 20.431 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for common.BasePage$$Lambda$736/1264191370@5e13f156 (tried for 20 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"(//a[@title='Patron Reports'])[1]"}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'SATISHKUMAR', ip: '172.21.80.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_302'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4aa1199fbd03464ab9656fd8cf2306c4, findElement {using=xpath, value=(//a[@title='Patron Reports'])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\SATISH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65216}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65216/devtoo..., se:cdpVersion: 97.0.4692.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4aa1199fbd03464ab9656fd8cf2306c4
+
+Validate End to End testing on Home Page.Generate Report  Time elapsed: 21.291 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for common.BasePage$$Lambda$736/1264191370@16a2ed51 (tried for 20 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//a[@id='__tab_ContentBody_SelectionCriteria1_TabContainer_SelectionCriteria1_TabContainer_Patron']"}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'SATISHKUMAR', ip: '172.21.80.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_302'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4aa1199fbd03464ab9656fd8cf2306c4, findElement {using=xpath, value=//a[@id='__tab_ContentBody_SelectionCriteria1_TabContainer_SelectionCriteria1_TabContainer_Patron']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\SATISH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65216}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65216/devtoo..., se:cdpVersion: 97.0.4692.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4aa1199fbd03464ab9656fd8cf2306c4
+
+validate Login Page.Verify Password Reset button is visible  Time elapsed: 20.409 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for common.BasePage$$Lambda$736/1264191370@32118208 (tried for 20 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='PASSWORD RESET ']"}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'SATISHKUMAR', ip: '172.21.80.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_302'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4aa1199fbd03464ab9656fd8cf2306c4, findElement {using=xpath, value=//a[text()='PASSWORD RESET ']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\SATISH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65216}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65216/devtoo..., se:cdpVersion: 97.0.4692.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4aa1199fbd03464ab9656fd8cf2306c4
+
+validate Login Page.Verify Password Reset button is clickable  Time elapsed: 20.41 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for common.BasePage$$Lambda$736/1264191370@3610f277 (tried for 20 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='PASSWORD RESET ']"}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'SATISHKUMAR', ip: '172.21.80.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_302'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4aa1199fbd03464ab9656fd8cf2306c4, findElement {using=xpath, value=//a[text()='PASSWORD RESET ']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\SATISH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65216}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65216/devtoo..., se:cdpVersion: 97.0.4692.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4aa1199fbd03464ab9656fd8cf2306c4
+
+validate Login Page.Verify Terms and Condition is visible  Time elapsed: 20.328 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for common.BasePage$$Lambda$736/1264191370@58aa10f4 (tried for 20 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"(//a[text()='Terms & Conditions'])[1]"}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'SATISHKUMAR', ip: '172.21.80.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_302'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4aa1199fbd03464ab9656fd8cf2306c4, findElement {using=xpath, value=(//a[text()='Terms & Conditions'])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\SATISH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65216}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65216/devtoo..., se:cdpVersion: 97.0.4692.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4aa1199fbd03464ab9656fd8cf2306c4
+
+validate Login Page.Validate bar menu  Time elapsed: 20.348 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for common.BasePage$$Lambda$736/1264191370@55b5cd2b (tried for 20 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//img[@title='Help']"}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'SATISHKUMAR', ip: '172.21.80.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_302'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4aa1199fbd03464ab9656fd8cf2306c4, findElement {using=xpath, value=//img[@title='Help']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\SATISH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65216}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65216/devtoo..., se:cdpVersion: 97.0.4692.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4aa1199fbd03464ab9656fd8cf2306c4
+
+validate Login Page.do positive login  Time elapsed: 20.423 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for common.BasePage$$Lambda$736/1264191370@760487aa (tried for 20 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='TextUsername']"}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'SATISHKUMAR', ip: '172.21.80.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_302'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4aa1199fbd03464ab9656fd8cf2306c4, findElement {using=xpath, value=//input[@id='TextUsername']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\SATISH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65216}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65216/devtoo..., se:cdpVersion: 97.0.4692.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4aa1199fbd03464ab9656fd8cf2306c4
+
+validate Login Page.do Negative Login  Time elapsed: 20.48 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for common.BasePage$$Lambda$736/1264191370@106b014e (tried for 20 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='TextUsername']"}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'SATISHKUMAR', ip: '172.21.80.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_302'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4aa1199fbd03464ab9656fd8cf2306c4, findElement {using=xpath, value=//input[@id='TextUsername']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\SATISH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65216}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65216/devtoo..., se:cdpVersion: 97.0.4692.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4aa1199fbd03464ab9656fd8cf2306c4
+
