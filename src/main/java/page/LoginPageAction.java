@@ -43,7 +43,6 @@ public class LoginPageAction {
 		bp.SendKeys(lpl.getUsername(), username);
 		bp.ClearTextField(lpl.getPassword());
 		bp.SendKeys(lpl.getPassword(), password);
-		Thread.sleep(3000);
 		bp.ActionClass(lpl.getSubmitButton()).click().click().perform();
 	}
 	

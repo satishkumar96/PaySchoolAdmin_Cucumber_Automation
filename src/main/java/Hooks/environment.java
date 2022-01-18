@@ -22,9 +22,10 @@ public class environment {
 	public static void before_all() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.manage().window().maximize();
 		driver.get("https://alpha4a-test.sdms2.com/Default.aspx");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(150));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(150));
 		
 		new File("./test-output").deleteOnExit();
 		new File("./test output").deleteOnExit();

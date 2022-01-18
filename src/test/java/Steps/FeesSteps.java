@@ -48,7 +48,6 @@ public class FeesSteps {
 
 	@Then("click on first school")
 	public void click_on_first_school() throws Throwable {
-		fpa.clickFirstSchool();
 	}
 	@When("user click on first school")
 	public void user_click_on_first_school() {
@@ -78,37 +77,68 @@ public class FeesSteps {
 
 	@Given("user is on Required Information page")
 	public void user_is_on_required_information_page() throws Throwable {
-
+		Thread.sleep(30000);
 
 	}
 
 	@When("user edit fee name, fee description and fee code")
 	public void user_edit_fee_name_fee_description_and_fee_code() throws Throwable {
 		fpa.enterFeeName();
-		//		fpa.enterFeeCode();
+		Thread.sleep(3000);
+		fpa.enterFeeCode();
+		Thread.sleep(3000);
 		fpa.enterFeeDescription();
+		Thread.sleep(3000);
+	}
+
+
+	@When("validate select district, select school, expire at end checkbox, start date and end date")
+	public void validate_select_district_select_school_expire_at_end_checkbox_start_date_and_end_date() throws Throwable
+	{
+//		fpa.selectDistrict();
+//		Thread.sleep(3000);
+//		fpa.selectSchool();
+//		Thread.sleep(3000);
+		fpa.selectStartDate();
+		Thread.sleep(3000);
+		fpa.selectEndDate();
+		Thread.sleep(3000);
+		fpa.ExpireCheckBox();
 		Thread.sleep(3000);
 	}
 
 	@When("validate fee category and fee type")
 	public void validate_fee_category_and_fee_type() throws Throwable {
-		fpa.clickFeeCategory();
-		fpa.enterFeeCategoryName();
-		fpa.enterFeeCategoryDescription();
-
-		Thread.sleep(3000);
-
-//				fpa.clickFeeType();
-//				fpa.enterFeeTypeName();
-//				fpa.enterFeeTypeDescription();
-//				fpa.enterDeniedPrice();
-//				fpa.enterFreePrice();
-//				fpa.enterReducedPrice();
-//				fpa.verifyFreePriceButtons();
-//				fpa.verifyReducedPriceButtons();
-//				fpa.verifyDeniedPriceButtons();
-//				fpa.clickSaveButton();
-//				Thread.sleep(3000);
+//		fpa.clickFeeCategory();
+//		fpa.clickFeeCategoryButton();
+//		fpa.enterFeeCategoryName();
+//		fpa.enterFeeCategoryDescription();
+//
+//		Thread.sleep(3000);
+//
+//		fpa.clickFeeType();
+//		Thread.sleep(2000);
+//		fpa.clickFeeTypeButton();
+//		Thread.sleep(2000);
+//		fpa.enterFeeTypeName();
+//		Thread.sleep(2000);
+//		fpa.enterFeeTypeDescription();
+//		Thread.sleep(2000);
+//		fpa.enterDeniedPrice();
+//		Thread.sleep(2000);
+//		fpa.enterFreePrice();
+//		Thread.sleep(2000);
+//		fpa.enterReducedPrice();
+//		Thread.sleep(2000);
+//		fpa.verifyFreePriceButtons();
+//		Thread.sleep(2000);
+//		fpa.verifyReducedPriceButtons();
+//		Thread.sleep(2000);
+//		fpa.verifyDeniedPriceButtons();
+//		Thread.sleep(2000);
+//		fpa.clickSaveButton();
+//		Thread.sleep(2000);
+	
 	}
 
 	@Then("click on next button")

@@ -1,6 +1,10 @@
 package page;
 import java.awt.Robot;	
-import java.awt.event.KeyEvent;	
+import java.awt.event.KeyEvent;
+
+import org.openqa.selenium.Keys;
+
+import Hooks.environment;
 import Locators.FeesLocator;
 import common.BasePage;
 
@@ -52,9 +56,9 @@ public class FeePageAction {
 		
 		Thread.sleep(3000);
 		
-		bp.clickElement(fl.getYesButton());
-		
-		Thread.sleep(3000);
+//		bp.clickElement(fl.getYesButton());
+//		
+//		Thread.sleep(3000);
 		
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
@@ -65,6 +69,42 @@ public class FeePageAction {
 	}
 	public void clickStartButton() throws Throwable {
 		bp.ActionClass(fl.getStartButton()).click().click().perform();
+	}
+	
+	public void selectDistrict() throws Throwable {
+		bp.ActionClass(fl.getDistrictDropDown()).click().perform();
+		
+		Robot r = new Robot();
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+	}
+	public void selectSchool() throws Throwable {
+		bp.ActionClass(fl.getSchoolDropDown()).click().perform();
+		
+		Robot r = new Robot();
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+	}
+	public void selectStartDate() throws Throwable {
+		bp.ActionClass(fl.getStartDate()).click().perform();
+		
+		Thread.sleep(3000);
+		
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+	}
+	public void selectEndDate() throws Throwable {
+		bp.ActionClass(fl.getEndDate()).click().perform();
+		
+		Thread.sleep(3000);
+		
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+	}
+	public void ExpireCheckBox() throws Throwable {
+		bp.ActionClass(fl.getExpireCheckBox()).click().perform();
 	}
 	public void enterFeeName() throws Throwable {
 		bp.ClearTextField(fl.getFeeName());
@@ -79,7 +119,16 @@ public class FeePageAction {
 		bp.SendKeys(fl.getFeeDescription(), "This is a school fees");
 	}
 	public void clickFeeCategory() throws Throwable {
-		bp.clickElement(fl.getFeeCategory());
+		bp.ActionClass(fl.getFeeCategory()).click().perform();
+		
+		Robot r = new Robot();
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_DOWN);
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+	}
+	public void clickFeeCategoryButton() throws Throwable {
+		bp.ActionClass(fl.getFeeCategoryButton()).click().perform();
 	}
 	public void enterFeeCategoryName() throws Throwable {
 		bp.SendKeys(fl.getFeeCategoryName(), "Tution Fees");
@@ -95,7 +144,16 @@ public class FeePageAction {
 
 	}
 	public void clickFeeType() throws Throwable {
-		bp.clickElement(fl.getEditFeeTypeButton());
+		bp.ActionClass(fl.getEditFeeTypeButton()).click().perform();
+		
+		Robot r = new Robot();
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_DOWN);
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+	}
+	public void clickFeeTypeButton() throws Throwable {
+		bp.ActionClass(fl.getFeeTypeButton()).click().perform();
 	}
 	public void enterFeeTypeName() throws Throwable {
 		bp.ClearTextField(fl.getEditFeeTypeName());
@@ -146,11 +204,15 @@ public class FeePageAction {
 		}
 	}
 	public void clickNextButton() throws Throwable {
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_END);
+		robot.keyRelease(KeyEvent.VK_END);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		
 		bp.ActionClass(fl.getNextButton()).click().click().perform();
 
-		Thread.sleep(3000);
-
-		Robot robot = new Robot();
+		Thread.sleep(2000);
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_HOME);
 		robot.keyRelease(KeyEvent.VK_HOME);
@@ -204,6 +266,6 @@ public class FeePageAction {
 	}
 
 	public void goToHomePage() throws Throwable {
-		bp.clickElement(fl.getHomeButton());
+		environment.getDriver().get("https://alpha4a-test.sdms2.com/Module/SDMS/Home.aspx");
 	}
 }

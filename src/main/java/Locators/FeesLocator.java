@@ -8,19 +8,15 @@ public class FeesLocator {
 	public String getFeesTab() throws Throwable {
 		return bp.AdminManageFees(1, 1);
 	}
-
 	public String getAdministratorOption() throws Throwable {
 		return bp.AdminManageFees(2, 1);
 	}
-
 	public String getManageFeesOption() throws Throwable {
 		return bp.AdminManageFees(3, 1);
 	}
-
 	public String getManageFeesHomePage() throws Throwable {
 		return bp.AdminManageFees(4, 1);
 	}
-
 	public String getSearchTextBoc() throws Throwable {
 		return bp.AdminManageFees(5, 1);
 	}
@@ -134,5 +130,26 @@ public class FeesLocator {
 	}
 	public String getHomeButton() throws Throwable {
 		return bp.AdminManageFees(42, 1);
+	}
+	public String getDistrictDropDown() throws Throwable {
+		return bp.AdminManageFees(43, 1);
+	}
+	public String getSchoolDropDown() throws Throwable {
+		return bp.AdminManageFees(44, 1);
+	}
+	public String getStartDate() throws Throwable {
+		return bp.AdminManageFees(45, 1);
+	}
+	public String getEndDate() throws Throwable {
+		return bp.AdminManageFees(46, 1);
+	}
+	public String getExpireCheckBox() throws Throwable {
+		return bp.AdminManageFees(47, 1);
+	}
+	public String getFeeCategoryButton() throws Throwable {
+		return bp.AdminManageFees(48, 1);
+	}
+	public String getFeeTypeButton() throws Throwable {
+		return bp.AdminManageFees(49, 1);
 	}
 }
