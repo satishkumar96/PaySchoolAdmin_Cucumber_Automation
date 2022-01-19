@@ -2,8 +2,6 @@ package page;
 import java.awt.Robot;	
 import java.awt.event.KeyEvent;
 
-import org.openqa.selenium.Keys;
-
 import Hooks.environment;
 import Locators.FeesLocator;
 import common.BasePage;
@@ -266,6 +264,6 @@ public class FeePageAction {
 	}
 
 	public void goToHomePage() throws Throwable {
-		environment.getDriver().get("https://alpha4a-test.sdms2.com/Module/SDMS/Home.aspx");
+		environment.driver.get("https://alpha4a-test.sdms2.com/Module/SDMS/Home.aspx");
 	}
 }
