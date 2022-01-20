@@ -34,6 +34,10 @@ stages
         }
 
         post {
+        
+        	always {
+	            cucumber buildStatus: 'null', customCssFiles: '', customJsFiles: '', fileIncludePattern: '**/*.json', jsonReportDirectory: 'target/cucumber-reports/', reportTitle: 'Pay_School_Admin_Cucumber_Report', sortingMethod: 'ALPHABETICAL'
+	        }
 
              failure
             {
