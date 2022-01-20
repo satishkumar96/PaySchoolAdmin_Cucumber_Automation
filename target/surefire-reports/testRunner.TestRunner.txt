@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: testRunner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 345.44 s - in testRunner.TestRunner
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 683.721 s - in testRunner.TestRunner

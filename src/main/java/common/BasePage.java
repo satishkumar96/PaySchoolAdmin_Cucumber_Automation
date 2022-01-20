@@ -42,14 +42,14 @@ public class BasePage {
 
 
 	public static WebElement webdriverwaitForElement(String xpathValue) {
-		WebElement element = new WebDriverWait(environment.driver, Duration.ofSeconds(30)).
+		WebElement element = new WebDriverWait(environment.driver, Duration.ofSeconds(100)).
 				until(driver -> driver.findElement(By.xpath(xpathValue)));
 
 		return element;
 	}
 
 	public static List<WebElement> webdriverwaitForElements(String xpathValue) {
-		List<WebElement> elements = new WebDriverWait(environment.driver, Duration.ofSeconds(30)).
+		List<WebElement> elements = new WebDriverWait(environment.driver, Duration.ofSeconds(100)).
 				until(driver -> driver.findElements(By.xpath(xpathValue)));
 
 		return elements;

@@ -8,7 +8,7 @@ tools {
 
 stages 
   {
-         stage('Clean WorkSpace') 
+        stage('Clean WorkSpace')
    {
          steps 
      {

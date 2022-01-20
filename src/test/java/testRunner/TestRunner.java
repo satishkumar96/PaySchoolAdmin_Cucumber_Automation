@@ -33,7 +33,8 @@ public class TestRunner {
 		environment.driver = new ChromeDriver();
 		environment.driver.manage().window().maximize();
 		environment.driver.get("https://alpha4a-test.sdms2.com/Default.aspx");
-		environment.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		environment.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
+		environment.driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(100));
 	}
 
 	@AfterClass
