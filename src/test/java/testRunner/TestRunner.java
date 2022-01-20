@@ -26,6 +26,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 		monochrome = true		
 		)
 public class TestRunner {
+	
 	@BeforeClass
 	public static void launch() {
 

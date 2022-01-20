@@ -36,9 +36,9 @@ Feature: Validate end to end testing on Admin. Manage fees
     Then click on next button
 
   Scenario: verify Amount & Installation
-    #Given user is on Amount & Installation page
-    #When user validate fixed field
-    #And validate Tiered field
-    #And validate Variable filed
-    #Then click on next button
+    Given user is on Amount & Installation page
+    When user validate fixed field
+    And validate Tiered field
+    And validate Variable filed
+    Then click on next button
     And go to Home Page

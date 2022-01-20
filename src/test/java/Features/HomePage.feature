@@ -1,18 +1,43 @@
 Feature: Validate End to End testing on Home Page
 
-  Scenario Outline: Validate Patron tab
-    #When username and password field are display
-    #And enter "<username>" and "<password>"
-    #And click on Login button
+  Scenario Outline: Validate Home Page
     Then homepage should display
-    And mouse over to Patron
 
     Examples: 
       | username  | password |
       | chimerasa | Test2021 |
 
+  Scenario: Verify Home Tab visibility
+    Given homepage should display
+    Then validate Home Tab should visible
+
+  Scenario: Verify Patrons Tab visibility
+    Given homepage should display
+    Then validate Patrons Tab should visible
+
+  Scenario: Verify Reports Tab visibility
+    Given homepage should display
+    Then validate Reports Tab should visible
+
+  Scenario: Verify Nurse Tracking Tab visibility
+    Given homepage should display
+    Then validate Nurse Tracking Tab should visible
+
+  Scenario: Verify Quick Apps Tab visibility
+    Given homepage should display
+    Then validate Quick Apps Tab should visible
+
+  Scenario: Verify Forms Tab visibility
+    Given homepage should display
+    Then validate Forms Tab should visible
+
+  Scenario: Verify School Programs Tab visibility
+    Given homepage should display
+    Then validate School Programs Tab should visible
+
   Scenario: Select Search Patron
-    Given select Search Patron
+    Given mouse over to Patron
+    And select Search Patron
     When Search Box visible
     Then enter Patron Name or ID
     And click search button

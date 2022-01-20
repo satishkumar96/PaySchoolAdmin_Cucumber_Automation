@@ -114,6 +114,23 @@ public class FeesSteps {
 		fpa.enterFeeCategoryDescription();
 
 		Thread.sleep(3000);
+		
+		fpa.clickFeeType();
+		Thread.sleep(2000);
+		fpa.clickFeeTypeButton();
+		Thread.sleep(2000);
+		fpa.enterFeeTypeName();
+		Thread.sleep(2000);
+		fpa.enterFeeTypeDescription();
+		Thread.sleep(2000);
+		fpa.enterDeniedPrice();
+		Thread.sleep(2000);
+		fpa.enterReducedPrice();
+		Thread.sleep(2000);
+		fpa.enterFreePrice();
+		Thread.sleep(2000);
+		fpa.verifyFreePriceButtons();
+		Thread.sleep(2000);
 	}
 
 	@Then("click on next button")

@@ -129,9 +129,11 @@ public class FeePageAction {
 		bp.ActionClass(fl.getFeeCategoryButton()).click().perform();
 	}
 	public void enterFeeCategoryName() throws Throwable {
+		bp.ClearTextField(fl.getFeeCategoryName());
 		bp.SendKeys(fl.getFeeCategoryName(), "Tution Fees");
 	}
 	public void enterFeeCategoryDescription() throws Throwable {
+		bp.ClearTextField(fl.getFeeCategoryDescription());
 		bp.SendKeys(fl.getFeeCategoryDescription(), "Tution Fees 001");
 
 		Thread.sleep(3000);
@@ -181,9 +183,6 @@ public class FeePageAction {
 		bp.clickListOfElements(fl.getReducedPriceButtons());
 	}
 	public void verifyFreePriceButtons() throws Throwable {
-		bp.clickListOfElements(fl.getFreePriceButtons());
-
-
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_ESCAPE);
 		robot.keyRelease(KeyEvent.VK_ESCAPE);
@@ -207,6 +206,7 @@ public class FeePageAction {
 		robot.keyPress(KeyEvent.VK_END);
 		robot.keyRelease(KeyEvent.VK_END);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
+		Thread.sleep(2000);
 		
 		bp.ActionClass(fl.getNextButton()).click().click().perform();
 

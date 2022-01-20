@@ -8,12 +8,14 @@ import io.cucumber.java.Scenario;
 public class environment {
 
 	public static WebDriver driver;
-	
+
 	@After
 	public void takeScreenShots(Scenario scenario)
 	{
-	    byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-	    scenario.attach(screenshot, "image/png", "name");
-	}
+		if (scenario.isFailed()) {
+			byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+			scenario.attach(screenshot, "image/png", "name");
+		}
 
 	}
+}

@@ -6,45 +6,44 @@ public class HomePageLocators {
 	private BasePage bp = new BasePage();
 	
 	public String getHomeTab() throws Throwable {
-		String HomeTab = bp.HomePageCellValue(1, 1);
-		
-		return HomeTab;
+		return bp.HomePageCellValue(1, 1);
 	}
 	
 	public String getRightArrow() throws Throwable {
-		String ArrowButton = bp.HomePageCellValue(2, 1);
-		
-		return ArrowButton;
+		return bp.HomePageCellValue(2, 1);
 	}
 	
 	public String getLogoutTab() throws Throwable {
-		String LogoutTab = bp.HomePageCellValue(3, 1);
-		
-		return LogoutTab;
+		return bp.HomePageCellValue(3, 1);
 	}
 	
 	public String getPatronsTab() throws Throwable {
-		String PatronsTab = bp.HomePageCellValue(4, 1);
-		
-		return PatronsTab;
+		return bp.HomePageCellValue(4, 1);
 	}
 	
 	public String getSearchPatrons() throws Throwable {
-		String SearchPatron = bp.HomePageCellValue(5, 1);
-		
-		return SearchPatron;
+		return bp.HomePageCellValue(5, 1);
 	}
 	
 	public String getSearchButton() throws Throwable {
-		String SearchButton = bp.HomePageCellValue(6, 1);
-		
-		return SearchButton;
+		return bp.HomePageCellValue(6, 1);
 	}
 	
 	public String getSearchInputBBox() throws Throwable {
-		String SearchInputBox = bp.HomePageCellValue(7, 1);
-		
-		return SearchInputBox;
+		return bp.HomePageCellValue(7, 1);
+	}
+	
+	public String getNurseTrackinTab() throws Throwable {
+		return bp.HomePageCellValue(8, 1);
+	}
+	public String getQuickAppsTab() throws Throwable {
+		return bp.HomePageCellValue(9, 1);
+	}
+	public String getFormsTab() throws Throwable {
+		return bp.HomePageCellValue(10, 1);
+	}
+	public String getSchoolProgramsTab() throws Throwable {
+		return bp.HomePageCellValue(11, 1);
 	}
 	
 	public String getPatronName() throws Throwable {

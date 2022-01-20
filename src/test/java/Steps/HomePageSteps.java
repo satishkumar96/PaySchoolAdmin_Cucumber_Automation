@@ -1,5 +1,6 @@
 package Steps;
 
+import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
 
 import Hooks.environment;
@@ -19,9 +20,37 @@ public class HomePageSteps {
 
 	@Then("mouse over to Patron")
 	public void mouse_over_to_patron() throws Throwable {
-
 		hpa.mouseOverPatrons();		
-
+	}
+	
+	@Then("validate Home Tab should visible")
+	public void validate_Home_Tab_should_visible() throws Throwable {
+		Assert.assertTrue(hpa.HomeTab());
+	}
+	
+	@Then("validate Patrons Tab should visible")
+	public void validate_Patrons_Tab_should_visible() throws Throwable {
+		Assert.assertTrue(hpa.PatronTab());
+	}
+	@Then("validate Reports Tab should visible")
+	public void validate_Reports_Tab_should_visible() throws Throwable {
+		Assert.assertTrue(hpa.ReportTab());
+	}
+	@Then("validate Nurse Tracking Tab should visible")
+	public void validate_Nurse_Tracking_Tab_should_visible() throws Throwable {
+		Assert.assertTrue(hpa.NurseTrackinTab());
+	}
+	@Then("validate Quick Apps Tab should visible")
+	public void validate_Quick_Apps_Tab_should_visible() throws Throwable {
+		Assert.assertTrue(hpa.QuickAppsTab());
+	}
+	@Then("validate Forms Tab should visible")
+	public void validate_Forms_Tab_should_visible() throws Throwable {
+		Assert.assertTrue(hpa.FormsTab());
+	}
+	@Then("validate School Programs Tab should visible")
+	public void validate_School_Programs_Tab_should_visible() throws Throwable {
+		Assert.assertTrue(hpa.SchoolProgramTab());
 	}
 
 	@Given("select Search Patron")
@@ -32,7 +61,7 @@ public class HomePageSteps {
 
 	@When("Search Box visible")
 	public void search_box_visible() throws Throwable {
-		hpa.checkSearchInputBox();
+		Assert.assertTrue(hpa.checkSearchInputBox());
 	}
 
 	@Then("enter Patron Name or ID")
