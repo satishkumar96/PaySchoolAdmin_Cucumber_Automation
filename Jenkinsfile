@@ -30,7 +30,7 @@ stages
         steps
         {
             // To run Maven on a Windows agent, use
-            bat 'mvn clean test'
+            bat 'mvn clean verify'
         }
 
         post {
