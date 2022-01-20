@@ -8,7 +8,7 @@ tools {
 
 stages 
   {
-       stage('Clean WorkSpace')
+ /*        stage('Clean WorkSpace')
    {
          steps 
      {
@@ -23,7 +23,7 @@ stages
              git branch: 'main', credentialsId: '8e735933-9389-48ae-97dd-e337b74240a7', url: 'https://github.com/satishkumar96/PaySchoolAdmin_Cucumber_Automation.git'
          }
      }
- 
+ */
     stage('Test and emailable-report')
     {
 
@@ -37,7 +37,7 @@ stages
 
              failure
             {
-                emailext attachmentsPattern: 'test output/PdfReport/ExtentPdf.pdf, test-output/SparkReport/Index.html', body: '''Hello Everybody,
+                emailext attachmentsPattern: 'target/test output/PdfReport/ExtentPdf.pdf, target/test-output/SparkReport/Index.html', body: '''Hello Everybody,
 
 The execution of PSC Automation Testing in Dev environment has failed. We are looking into the issue and would re-run the automation job upon rectifying the issue.
 
@@ -47,7 +47,7 @@ QA Team''', subject: '[$BUILD_STATUS] - $PROJECT_NAME - Build # $BUILD_NUMBER ($
             
             success 
             {            
-                emailext attachmentsPattern: 'test output/PdfReport/ExtentPdf.pdf, test-output/SparkReport/Index.html', body: '''Hello Everybody,
+                emailext attachmentsPattern: 'target/test output/PdfReport/ExtentPdf.pdf, target/test-output/SparkReport/Index.html', body: '''Hello Everybody,
 
 The automated test execution of PSC Smoke Test Cases is completed. Please find the test report in the below FTP folder,
 PSC Automation Testing Report - Beta.
