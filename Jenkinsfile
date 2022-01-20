@@ -8,7 +8,7 @@ tools {
 
 stages 
   {
-        stage('Clean WorkSpace')
+ /*        stage('Clean WorkSpace')
    {
          steps 
      {
@@ -23,7 +23,7 @@ stages
              git branch: 'main', credentialsId: '8e735933-9389-48ae-97dd-e337b74240a7', url: 'https://github.com/satishkumar96/PaySchoolAdmin_Cucumber_Automation.git'
          }
      }
-
+ */
     stage('Test and emailable-report')
     {
 
@@ -42,7 +42,7 @@ stages
 The execution of PSC Automation Testing in Dev environment has failed. We are looking into the issue and would re-run the automation job upon rectifying the issue.
 
 Regards,
-QA Team''', subject: '[$BUILD_STATUS] - $PROJECT_NAME - Build # $BUILD_NUMBER ($BUILD_ID)', to: 'automationwithsatish@gmail.com'
+QA Team''', subject: '[$BUILD_STATUS] - $PROJECT_NAME - Build # $BUILD_NUMBER ($BUILD_ID)', to: 'satishk@chimeratechnologies.com'
             }
             
             success 
@@ -53,7 +53,7 @@ The automated test execution of PSC Smoke Test Cases is completed. Please find t
 PSC Automation Testing Report - Beta.
 
 Regards,
-QA Team''', subject: '[$BUILD_STATUS] - $PROJECT_NAME - Build # $BUILD_NUMBER ($BUILD_ID)', to: 'automationwithsatish@gmail.com, deepakd@chimeratechnologies.com'
+QA Team''', subject: '[$BUILD_STATUS] - $PROJECT_NAME - Build # $BUILD_NUMBER ($BUILD_ID)', to: 'satishk@chimeratechnologies.com, deepakd@chimeratechnologies.com'
                 }
         }
     }
