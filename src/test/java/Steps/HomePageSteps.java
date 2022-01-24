@@ -81,7 +81,6 @@ public class HomePageSteps {
 	@When("first patron display")
 	public void first_patron_display() throws Throwable {
 		vpa.checkFirstPatron();
-		Thread.sleep(3000);
 	}
 	@Then("click on first patron")
 	public void click_on_first_patron() throws Throwable {
@@ -104,7 +103,6 @@ public class HomePageSteps {
 	@Given("check Report tab is visible and clickable")
 	public void check_Report_tab_is_visible() throws Throwable {
 		rpa.checkReportTab();
-		Thread.sleep(3000);
 	}
 
 	@Then("click on Report Tab")

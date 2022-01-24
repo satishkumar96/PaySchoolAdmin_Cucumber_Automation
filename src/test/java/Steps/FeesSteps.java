@@ -94,43 +94,54 @@ public class FeesSteps {
 	@When("validate select district, select school, expire at end checkbox, start date and end date")
 	public void validate_select_district_select_school_expire_at_end_checkbox_start_date_and_end_date() throws Throwable
 	{
-		fpa.selectDistrict();
-		Thread.sleep(3000);
-		fpa.selectSchool();
-		Thread.sleep(3000);
-		fpa.selectStartDate();
-		Thread.sleep(3000);
-		fpa.selectEndDate();
-		Thread.sleep(3000);
-		fpa.ExpireCheckBox();
-		Thread.sleep(3000);
+		
 	}
 
 	@When("validate fee category and fee type")
 	public void validate_fee_category_and_fee_type() throws Throwable {
-		fpa.clickFeeCategory();
-		fpa.clickFeeCategoryButton();
-		fpa.enterFeeCategoryName();
-		fpa.enterFeeCategoryDescription();
-
-		Thread.sleep(3000);
 		
-		fpa.clickFeeType();
-		Thread.sleep(2000);
-		fpa.clickFeeTypeButton();
-		Thread.sleep(2000);
-		fpa.enterFeeTypeName();
-		Thread.sleep(2000);
-		fpa.enterFeeTypeDescription();
-		Thread.sleep(2000);
-		fpa.enterDeniedPrice();
-		Thread.sleep(2000);
-		fpa.enterReducedPrice();
-		Thread.sleep(2000);
-		fpa.enterFreePrice();
-		Thread.sleep(2000);
-		fpa.verifyFreePriceButtons();
-		Thread.sleep(2000);
+		do
+		{
+			fpa.selectDistrict();
+			Thread.sleep(3000);
+			fpa.selectSchool();
+			Thread.sleep(3000);
+			fpa.selectStartDate();
+			Thread.sleep(3000);
+			fpa.selectEndDate();
+			Thread.sleep(3000);
+			fpa.ExpireCheckBox();
+			Thread.sleep(3000);
+			
+			fpa.clickFeeCategory();
+			Thread.sleep(2000);
+			fpa.clickFeeCategoryButton();
+			Thread.sleep(2000);
+			fpa.enterFeeCategoryName();
+			Thread.sleep(2000);
+			fpa.enterFeeCategoryDescription();
+			
+			Thread.sleep(3000);
+			
+			fpa.clickFeeType();
+			Thread.sleep(2000);
+			fpa.clickFeeTypeButton();
+			Thread.sleep(2000);
+			fpa.enterFeeTypeName();
+			Thread.sleep(2000);
+			fpa.enterFeeTypeDescription();
+			Thread.sleep(2000);
+			fpa.enterDeniedPrice();
+			Thread.sleep(2000);
+			fpa.enterReducedPrice();
+			Thread.sleep(2000);
+			fpa.enterFreePrice();
+			Thread.sleep(2000);
+			fpa.verifyFreePriceButtons();
+			Thread.sleep(2000);
+			
+			
+		}while(fpa.NextButton()==false);
 	}
 
 	@Then("click on next button")

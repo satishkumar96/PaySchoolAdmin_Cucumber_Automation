@@ -36,7 +36,6 @@ public class LoginPageSteps {
 	@Then("click on Back to SignIn Page")
 	public void click_on_back_to_sign_in_page() throws Throwable {
 		lpa.clickBackToSignInPage();
-		Thread.sleep(3000);
 	}
 
 	@When("username and password field are display")

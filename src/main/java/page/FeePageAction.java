@@ -51,13 +51,13 @@ public class FeePageAction {
 	}
 	public void selectAssignedFees() throws Throwable {
 		bp.clickElement(fl.getAssignedFees());
-		
+
 		Thread.sleep(3000);
-		
-//		bp.clickElement(fl.getYesButton());
-//		
-//		Thread.sleep(3000);
-		
+
+		//		bp.clickElement(fl.getYesButton());
+		//		
+		//		Thread.sleep(3000);
+
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_END);
@@ -68,41 +68,45 @@ public class FeePageAction {
 	public void clickStartButton() throws Throwable {
 		bp.ActionClass(fl.getStartButton()).click().click().perform();
 	}
-	
+
 	public void selectDistrict() throws Throwable {
 		bp.ActionClass(fl.getDistrictDropDown()).click().perform();
-		
+
 		Robot r = new Robot();
 		r.keyPress(KeyEvent.VK_ENTER);
 		r.keyRelease(KeyEvent.VK_ENTER);
 	}
 	public void selectSchool() throws Throwable {
 		bp.ActionClass(fl.getSchoolDropDown()).click().perform();
-		
+
 		Robot r = new Robot();
 		r.keyPress(KeyEvent.VK_ENTER);
 		r.keyRelease(KeyEvent.VK_ENTER);
 	}
 	public void selectStartDate() throws Throwable {
 		bp.ActionClass(fl.getStartDate()).click().perform();
-		
+
 		Thread.sleep(3000);
-		
+
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 	}
 	public void selectEndDate() throws Throwable {
 		bp.ActionClass(fl.getEndDate()).click().perform();
-		
+
 		Thread.sleep(3000);
-		
+
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 	}
 	public void ExpireCheckBox() throws Throwable {
-		bp.ActionClass(fl.getExpireCheckBox()).click().perform();
+		if(bp.selectCheckBox(fl.getExpireCheckBox())==false)
+		{
+			bp.ActionClass(fl.getExpireCheckBox()).click().perform();
+		}
+		
 	}
 	public void enterFeeName() throws Throwable {
 		bp.ClearTextField(fl.getFeeName());
@@ -118,7 +122,7 @@ public class FeePageAction {
 	}
 	public void clickFeeCategory() throws Throwable {
 		bp.ActionClass(fl.getFeeCategory()).click().perform();
-		
+
 		Robot r = new Robot();
 		r.keyPress(KeyEvent.VK_DOWN);
 		r.keyRelease(KeyEvent.VK_DOWN);
@@ -145,7 +149,7 @@ public class FeePageAction {
 	}
 	public void clickFeeType() throws Throwable {
 		bp.ActionClass(fl.getEditFeeTypeButton()).click().perform();
-		
+
 		Robot r = new Robot();
 		r.keyPress(KeyEvent.VK_DOWN);
 		r.keyRelease(KeyEvent.VK_DOWN);
@@ -187,6 +191,13 @@ public class FeePageAction {
 		robot.keyPress(KeyEvent.VK_ESCAPE);
 		robot.keyRelease(KeyEvent.VK_ESCAPE);
 
+		Thread.sleep(3000);
+
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_END);
+		robot.keyRelease(KeyEvent.VK_END);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+
 	}
 	public void clickSaveButton() throws Throwable {
 
@@ -200,6 +211,11 @@ public class FeePageAction {
 			robot.keyRelease(KeyEvent.VK_ESCAPE);
 		}
 	}
+
+	public boolean NextButton() throws Throwable {
+		return bp.enableElement(fl.getNextButton());
+	}
+
 	public void clickNextButton() throws Throwable {
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
@@ -207,7 +223,7 @@ public class FeePageAction {
 		robot.keyRelease(KeyEvent.VK_END);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		Thread.sleep(2000);
-		
+
 		bp.ActionClass(fl.getNextButton()).click().click().perform();
 
 		Thread.sleep(2000);

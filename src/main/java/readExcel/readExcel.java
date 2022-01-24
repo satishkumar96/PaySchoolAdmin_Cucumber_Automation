@@ -42,7 +42,9 @@ public class readExcel {
 	}
 	public XSSFSheet getAdminManageFessSheet() throws Throwable {
 		return readExcel.getLocatorWorkBook().getSheet("AdminManageFees");
-		
+	}
+	public XSSFSheet getAccountSheet() throws Throwable {
+		return readExcel.getLocatorWorkBook().getSheet("Accounts");
 	}
 
 }
