@@ -25,7 +25,8 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>3.0.0-M5</version>
 					<configuration>
-						<includes>TestRunner.java</includes>
+						<reuseForks>true</reuseForks>
+						<includes>**/*Test.java</includes>
 					</configuration>
 				</plugin>
 

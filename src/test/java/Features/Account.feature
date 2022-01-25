@@ -67,3 +67,4 @@ Feature: Validate end to end testing on Account Tab
     Then click on Save button
     And click on Refresh button
     And go to Home Page
+    And perform logout

@@ -24,7 +24,7 @@ public class HomePageAction {
 		}while(bp.displayElement(hpl.getLogoutTab()));
 
 		bp.clickElement(hpl.getLogoutTab());
-
+		Thread.sleep(3000);
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);

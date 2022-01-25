@@ -20,6 +20,7 @@ public class HomePageSteps {
 
 	@Then("mouse over to Patron")
 	public void mouse_over_to_patron() throws Throwable {
+		Thread.sleep(3000);
 		hpa.mouseOverPatrons();		
 	}
 	
@@ -55,7 +56,7 @@ public class HomePageSteps {
 
 	@Given("select Search Patron")
 	public void select_search_patron() throws Throwable {
-
+		Thread.sleep(3000);
 		hpa.selectSearchPatron();
 	}
 
@@ -66,11 +67,13 @@ public class HomePageSteps {
 
 	@Then("enter Patron Name or ID")
 	public void enter_patron_name_or_id() throws Throwable {
+		Thread.sleep(3000);
 		hpa.enterPatronName();
 	}
 
 	@Then("click search button")
 	public void click_search_button() throws Throwable {
+		Thread.sleep(3000);
 		hpa.clickSearchButton();
 	}
 
@@ -80,20 +83,24 @@ public class HomePageSteps {
 	}
 	@When("first patron display")
 	public void first_patron_display() throws Throwable {
+		Thread.sleep(3000);
 		vpa.checkFirstPatron();
 	}
 	@Then("click on first patron")
 	public void click_on_first_patron() throws Throwable {
+		Thread.sleep(3000);
 		vpa.selectFirstPatron();	
 	}
 
 	@When("Select Quick Lunch Restriction button")
 	public void Select_Quick_Lunch_Restriction_button() throws Throwable {
+		Thread.sleep(3000);
 		vpa.selectQuickLunchRest();
 	}
 
 	@Then("Validate each fields")
 	public void Validate_each_fields() throws Throwable {
+		Thread.sleep(3000);
 		vpa.checkDailySpenLimit();
 		vpa.checkRadioButtons();
 		Thread.sleep(3000);
@@ -147,6 +154,7 @@ public class HomePageSteps {
 	
 	@Then("click on Home Tab")
 	public void click_on_Home_Tab() throws Throwable {
+		Thread.sleep(3000);
 		hpa.clickHomeTab();
 	}
 }

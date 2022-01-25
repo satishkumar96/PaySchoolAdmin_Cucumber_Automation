@@ -1,11 +1,10 @@
 package testRunner;
 
 import java.time.Duration;
-
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 import Hooks.environment;
 import io.cucumber.junit.Cucumber;
@@ -25,13 +24,13 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 		glue = {"Steps","Hooks"},
 		monochrome = true		
 		)
-public class TestRunner {
-	
+public class EdgeTest {
 	@BeforeClass
 	public static void launch() {
-
-		WebDriverManager.chromedriver().setup();
-		environment.driver = new ChromeDriver();
+		
+		System.out.println("************* Edge Test environment Start ********************");
+		WebDriverManager.edgedriver().setup();
+		environment.driver = new EdgeDriver();
 		environment.driver.manage().window().maximize();
 		environment.driver.get("https://alpha4a-test.sdms2.com/Default.aspx");
 		environment.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
@@ -40,6 +39,7 @@ public class TestRunner {
 
 	@AfterClass
 	public static void close() {
+		System.out.println("************* Edge Test environment End ********************");
 		environment.driver.quit();
 	}
 }
