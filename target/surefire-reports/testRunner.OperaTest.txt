@@ -1,9 +1,0 @@
--------------------------------------------------------------------------------
-Test set: testRunner.OperaTest
--------------------------------------------------------------------------------
-Tests run: 41, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 583.32 s <<< FAILURE! - in testRunner.OperaTest
-testRunner.OperaTest  Time elapsed: 114.437 s  <<< ERROR!
-java.lang.RuntimeException: java.net.UnknownHostException: cucumber-messages-app-s3bucket-61aropwgu4ox.s3.eu-west-3.amazonaws.com
-Caused by: java.net.UnknownHostException: cucumber-messages-app-s3bucket-61aropwgu4ox.s3.eu-west-3.amazonaws.com
-Caused by: java.net.UnknownHostException: cucumber-messages-app-s3bucket-61aropwgu4ox.s3.eu-west-3.amazonaws.com
-

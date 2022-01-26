@@ -20,7 +20,7 @@ public class HomePageAction {
 	public void performLogout() throws Throwable {
 
 		if(bp.displayElement(hpl.getLogoutTab())){
-			bp.clickElement(hpl.getLogoutTab());
+			bp.ActionClass(hpl.getLogoutTab()).click().click().perform();
 			Thread.sleep(3000);
 		}
 		else
