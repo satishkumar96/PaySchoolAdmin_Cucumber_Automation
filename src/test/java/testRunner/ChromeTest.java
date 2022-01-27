@@ -15,7 +15,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-		features = {"src/test/java/Features"},
+		features = {"src/test/java/Features/Fees.feature"},
 		plugin = {"pretty", 
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"html:target/cucumber-reports/report.html",

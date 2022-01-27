@@ -116,8 +116,9 @@ public class FeePageAction {
 		bp.SendKeys(fl.getFeeCode(), "SCH123454");
 	}
 	public void enterFeeDescription() throws Throwable {
-		bp.ClearTextField(fl.getFeeDescription());
-		bp.SendKeys(fl.getFeeDescription(), "This is a school fees");
+		bp.ActionClass(fl.getFeeDescription()).click().perform();
+		bp.ActionClass(fl.getFeeDescription()).sendKeys("this is school fee").perform();
+//		bp.SendKeys(fl.getFeeDescription(), "This is a school fees");
 	}
 	public void clickFeeCategory() throws Throwable {
 		bp.ActionClass(fl.getFeeCategory()).click().perform();
