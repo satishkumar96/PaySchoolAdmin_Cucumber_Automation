@@ -3,6 +3,9 @@ package page;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
+import org.openqa.selenium.Alert;
+
+import Hooks.environment;
 import Locators.HomePageLocators;
 import Locators.ReportPageLocator;
 import common.BasePage;
@@ -22,9 +25,10 @@ public class HomePageAction {
 		if(bp.displayElement(hpl.getLogoutTab())){
 			bp.ActionClass(hpl.getLogoutTab()).click().click().perform();
 			Thread.sleep(3000);
-			Robot robot = new Robot();
-			robot.keyPress(KeyEvent.VK_ENTER);
-			robot.keyRelease(KeyEvent.VK_ENTER);
+			
+			Alert alert = environment.driver.switchTo().alert();
+			alert.accept();
+			
 		}
 		else
 		{
@@ -37,11 +41,9 @@ public class HomePageAction {
 
 			bp.clickElement(hpl.getLogoutTab());
 			Thread.sleep(3000);
-			Robot robot = new Robot();
-			robot.keyPress(KeyEvent.VK_ENTER);
-			robot.keyRelease(KeyEvent.VK_ENTER);
-
-			Thread.sleep(3000);
+			
+			Alert alert = environment.driver.switchTo().alert();
+			alert.accept();
 		}
 	}
 

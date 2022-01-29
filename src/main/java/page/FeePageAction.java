@@ -1,6 +1,6 @@
 package page;
-import java.awt.Robot;	
-import java.awt.event.KeyEvent;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 
 import Hooks.environment;
 import Locators.FeesLocator;
@@ -51,54 +51,36 @@ public class FeePageAction {
 	}
 	public void selectAssignedFees() throws Throwable {
 		bp.ActionClass(fl.getAssignedFees()).click().click().perform();
-		Thread.sleep(3000);
-
-		//		bp.clickElement(fl.getYesButton());
-		//		
-		//		Thread.sleep(3000);
-
-		Robot robot = new Robot();
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_END);
-		robot.keyRelease(KeyEvent.VK_END);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
 
 	}
 	public void clickStartButton() throws Throwable {
-		bp.ActionClass(fl.getStartButton()).click().click().perform();
+		((JavascriptExecutor) environment.driver).executeScript("window.scrollBy(0,document.body.scrollHeight)");
+		bp.clickElement(fl.getStartButton());
 	}
 
 	public void selectDistrict() throws Throwable {
 		bp.ActionClass(fl.getDistrictDropDown()).click().perform();
 
-		Robot r = new Robot();
-		r.keyPress(KeyEvent.VK_ENTER);
-		r.keyRelease(KeyEvent.VK_ENTER);
+		bp.ActionClass(fl.getDistrictDropDown()).sendKeys(Keys.ENTER).perform();
 	}
 	public void selectSchool() throws Throwable {
 		bp.ActionClass(fl.getSchoolDropDown()).click().perform();
 
-		Robot r = new Robot();
-		r.keyPress(KeyEvent.VK_ENTER);
-		r.keyRelease(KeyEvent.VK_ENTER);
+		bp.ActionClass(fl.getSchoolDropDown()).sendKeys(Keys.ENTER).perform();
 	}
 	public void selectStartDate() throws Throwable {
 		bp.ActionClass(fl.getStartDate()).click().perform();
 
 		Thread.sleep(3000);
 
-		Robot robot = new Robot();
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		bp.ActionClass(fl.getStartDate()).sendKeys(Keys.ENTER).perform();
 	}
 	public void selectEndDate() throws Throwable {
 		bp.ActionClass(fl.getEndDate()).click().perform();
 
 		Thread.sleep(3000);
 
-		Robot robot = new Robot();
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		bp.ActionClass(fl.getEndDate()).sendKeys(Keys.ENTER).perform();
 	}
 	public void ExpireCheckBox() throws Throwable {
 		if(bp.selectCheckBox(fl.getExpireCheckBox())==false)
@@ -123,11 +105,7 @@ public class FeePageAction {
 	public void clickFeeCategory() throws Throwable {
 		bp.ActionClass(fl.getFeeCategory()).click().perform();
 
-		Robot r = new Robot();
-		r.keyPress(KeyEvent.VK_DOWN);
-		r.keyRelease(KeyEvent.VK_DOWN);
-		r.keyPress(KeyEvent.VK_ENTER);
-		r.keyRelease(KeyEvent.VK_ENTER);
+		bp.ActionClass(fl.getFeeCategory()).sendKeys(Keys.ARROW_DOWN,Keys.ENTER).perform();
 	}
 	public void clickFeeCategoryButton() throws Throwable {
 		bp.ActionClass(fl.getFeeCategoryButton()).click().perform();
@@ -141,20 +119,12 @@ public class FeePageAction {
 		bp.SendKeys(fl.getFeeCategoryDescription(), "Tution Fees 001");
 
 		Thread.sleep(3000);
-
-		Robot robot = new Robot();
-		robot.keyPress(KeyEvent.VK_ESCAPE);
-		robot.keyRelease(KeyEvent.VK_ESCAPE);
-
+		bp.ActionClass(fl.getFeeCategoryDescription()).sendKeys(Keys.ESCAPE).perform();
 	}
 	public void clickFeeType() throws Throwable {
 		bp.ActionClass(fl.getEditFeeTypeButton()).click().perform();
 
-		Robot r = new Robot();
-		r.keyPress(KeyEvent.VK_DOWN);
-		r.keyRelease(KeyEvent.VK_DOWN);
-		r.keyPress(KeyEvent.VK_ENTER);
-		r.keyRelease(KeyEvent.VK_ENTER);
+		bp.ActionClass(fl.getEditFeeTypeButton()).sendKeys(Keys.ARROW_DOWN,Keys.ENTER).perform();
 	}
 	public void clickFeeTypeButton() throws Throwable {
 		bp.ActionClass(fl.getFeeTypeButton()).click().perform();
@@ -179,58 +149,21 @@ public class FeePageAction {
 	public void enterFreePrice() throws Throwable {
 		bp.ClearTextField(fl.getFreePrice());
 		bp.SendKeys(fl.getFreePrice(), "80");
+		
+		Thread.sleep(2000);
+		
+		bp.ActionClass(fl.getFreePrice()).sendKeys(Keys.ESCAPE).perform();
 	}
-	public void verifyDeniedPriceButtons() throws Throwable {
-		bp.clickListOfElements(fl.getDeniedPriceButtons());
-	}
-	public void verifyReducedPriceButtons() throws Throwable {
-		bp.clickListOfElements(fl.getReducedPriceButtons());
-	}
-	public void verifyFreePriceButtons() throws Throwable {
-		Robot robot = new Robot();
-		robot.keyPress(KeyEvent.VK_ESCAPE);
-		robot.keyRelease(KeyEvent.VK_ESCAPE);
-
-		Thread.sleep(3000);
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_END);
-		robot.keyRelease(KeyEvent.VK_END);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-
-	}
-	public void clickSaveButton() throws Throwable {
-
-		if(bp.elementStatus(fl.getSaveButton())==true) {
-
-			bp.clickElement(fl.getSaveButton());
-		}
-		else if (bp.elementStatus(fl.getSaveButton())==false) {
-			Robot robot = new Robot();
-			robot.keyPress(KeyEvent.VK_ESCAPE);
-			robot.keyRelease(KeyEvent.VK_ESCAPE);
-		}
-	}
-
 	public boolean NextButton() throws Throwable {
 		return bp.enableElement(fl.getNextButton());
 	}
 
 	public void clickNextButton() throws Throwable {
-		Robot robot = new Robot();
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_END);
-		robot.keyRelease(KeyEvent.VK_END);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		Thread.sleep(2000);
-
+		((JavascriptExecutor) environment.driver).executeScript("window.scrollBy(0,document.body.scrollHeight)");
 		bp.ActionClass(fl.getNextButton()).click().click().perform();
 
 		Thread.sleep(2000);
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_HOME);
-		robot.keyRelease(KeyEvent.VK_HOME);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
+		((JavascriptExecutor) environment.driver).executeScript("window.scrollBy(0,-250)", "");
 	}
 	public boolean verifyAmountInstallation() throws Throwable {
 		return bp.displayElement(fl.getFixedButton());

@@ -94,7 +94,7 @@ public class FeesSteps {
 	@When("validate select district, select school, expire at end checkbox, start date and end date")
 	public void validate_select_district_select_school_expire_at_end_checkbox_start_date_and_end_date() throws Throwable
 	{
-		
+
 	}
 
 	@When("validate fee category and fee type")
@@ -137,9 +137,6 @@ public class FeesSteps {
 			Thread.sleep(2000);
 			fpa.enterFreePrice();
 			Thread.sleep(2000);
-			fpa.verifyFreePriceButtons();
-			Thread.sleep(2000);
-			
 			
 		}while(fpa.NextButton()==false);
 	}
