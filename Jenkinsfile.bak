@@ -57,7 +57,7 @@ The automated test execution of PSC Smoke Test Cases is completed. Please find t
 PSC Automation Testing Report - Beta.
 
 Regards,
-QA Team''', subject: '[$BUILD_STATUS] - $PROJECT_NAME - Build # $BUILD_NUMBER ($BUILD_ID)', to: 'deepakd@chimeratechnologies.com, cc:automationwithsatish@gmail.com'
+QA Team''', subject: '[$BUILD_STATUS] - $PROJECT_NAME - Build # $BUILD_NUMBER ($BUILD_ID)', to: 'automationwithsatish@gmail.com'
                 }
         }
     }
