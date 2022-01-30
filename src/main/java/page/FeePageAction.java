@@ -80,7 +80,7 @@ public class FeePageAction {
 
 		Thread.sleep(3000);
 
-		bp.ActionClass(fl.getEndDate()).sendKeys(Keys.ENTER).perform();
+		bp.ActionClass(fl.getEndDate()).sendKeys(Keys.ARROW_RIGHT,Keys.ENTER).perform();
 	}
 	public void ExpireCheckBox() throws Throwable {
 		if(bp.selectCheckBox(fl.getExpireCheckBox())==false)
