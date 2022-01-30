@@ -50,7 +50,7 @@ public class FeePageAction {
 		return bp.displayElement(fl.getChooseFeeType());
 	}
 	public void selectAssignedFees() throws Throwable {
-		bp.ActionClass(fl.getAssignedFees()).click().click().perform();
+		bp.clickElement(fl.getAssignedFees());
 
 	}
 	public void clickStartButton() throws Throwable {
