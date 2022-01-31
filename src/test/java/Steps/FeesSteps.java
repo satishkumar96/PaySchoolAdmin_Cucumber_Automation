@@ -1,5 +1,6 @@
 package Steps;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
 import org.junit.Assert;
 
@@ -73,11 +74,18 @@ public class FeesSteps {
 	@Then("click start button")
 	public void click_start_button() throws Throwable {
 		Thread.sleep(3000);
-		fpa.clickStartButton();
+		do
+		{
+			fpa.selectAssignedFees();
+			((JavascriptExecutor) environment.driver).executeScript("window.scrollBy(0,document.body.scrollHeight)");
+		}
+		while(fpa.StartButton()==false);
 	}
 
 	@Given("user is on Required Information page")
 	public void user_is_on_required_information_page() throws Throwable {
+		Thread.sleep(3000);
+		fpa.clickStartButton();
 		Thread.sleep(3000);
 	}
 

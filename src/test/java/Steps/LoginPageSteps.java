@@ -47,7 +47,7 @@ public class LoginPageSteps {
 
 	@When("enter {string} and {string}")
 	public void enter_and(String un, String pwd) throws Throwable {
-
+		Thread.sleep(3000);
 		lpa.doLogin(un, pwd);
 	}
 

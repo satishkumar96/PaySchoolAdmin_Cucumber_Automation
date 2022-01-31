@@ -51,11 +51,13 @@ public class FeePageAction {
 	}
 	public void selectAssignedFees() throws Throwable {
 		bp.clickElement(fl.getAssignedFees());
-
 	}
+	public boolean StartButton() throws Throwable {
+		return bp.enableElement(fl.getStartButton());
+	}
+	
 	public void clickStartButton() throws Throwable {
-		((JavascriptExecutor) environment.driver).executeScript("window.scrollBy(0,document.body.scrollHeight)");
-		bp.clickElement(fl.getStartButton());
+		bp.ActionClass(fl.getStartButton()).click().click().perform();
 	}
 
 	public void selectDistrict() throws Throwable {
