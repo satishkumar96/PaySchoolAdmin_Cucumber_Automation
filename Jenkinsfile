@@ -8,7 +8,7 @@ tools {
 
 stages 
   {
-         stage('Clean WorkSpace')
+        /* stage('Clean WorkSpace')
    {
          steps 
      {
@@ -22,7 +22,7 @@ stages
              // Get some code from a GitHub repository
              git branch: 'main', credentialsId: 'c57d4c63-17ee-4f39-b0b3-5e21b6394b9d', url: 'https://github.com/satishkumar96/PaySchoolAdmin_Cucumber_Automation.git'
          }
-     }
+     }*/
      
     stage('Test and emailable-report')
     {
