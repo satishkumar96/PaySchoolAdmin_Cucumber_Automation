@@ -27,7 +27,10 @@
 					<configuration>
 						<forkCount>5</forkCount>
 						<reuseForks>true</reuseForks>
-						<includes>**/*Test.java</includes>
+						<includes>
+							<include>**/ChromeTest.java</include>
+							<include>**/OperaTest.java</include>
+						</includes>
 					</configuration>
 				</plugin>
 
