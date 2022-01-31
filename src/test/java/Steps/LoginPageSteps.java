@@ -1,6 +1,7 @@
 package Steps;
 
 
+import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
 
 import Hooks.environment;
@@ -40,7 +41,8 @@ public class LoginPageSteps {
 
 	@When("username and password field are display")
 	public void username_and_password_field_are_display() throws Throwable {
-		lpa.checkUnPwdDisplay();
+		Assert.assertTrue(lpa.checkUnDisplay());
+		Assert.assertTrue(lpa.checkPwdDisplay());
 	}
 
 	@When("enter {string} and {string}")

@@ -66,6 +66,7 @@ public class FeesSteps {
 
 	@Then("select Assigned Fees")
 	public void select_assigned_fees() throws Throwable {
+		Thread.sleep(5000);
 		fpa.selectAssignedFees();
 	}
 

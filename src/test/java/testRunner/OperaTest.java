@@ -28,18 +28,18 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class OperaTest {
 	@BeforeClass
 	public static void launch() {
-
 		System.out.println("************* Opera Test environment Start ********************");
 		WebDriverManager.operadriver().setup();
 		environment.driver = new OperaDriver();
 		environment.driver.manage().window().maximize();
 		environment.driver.get("https://alpha4a-test.sdms2.com/Default.aspx");
-		environment.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
-		environment.driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(100));
+		environment.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
+		environment.driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
 	}
 
 	@AfterClass
 	public static void close() {
+		System.out.println();
 		System.out.println("************* Opera Test environment End ********************");
 		environment.driver.quit();
 	}

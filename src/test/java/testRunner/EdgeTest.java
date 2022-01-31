@@ -27,18 +27,18 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class EdgeTest {
 	@BeforeClass
 	public static void launch() {
-		
 		System.out.println("************* Edge Test environment Start ********************");
 		WebDriverManager.edgedriver().setup();
 		environment.driver = new EdgeDriver();
 		environment.driver.manage().window().maximize();
 		environment.driver.get("https://alpha4a-test.sdms2.com/Default.aspx");
-		environment.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
-		environment.driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(100));
+		environment.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
+		environment.driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
 	}
 
 	@AfterClass
 	public static void close() {
+		System.out.println();
 		System.out.println("************* Edge Test environment End ********************");
 		environment.driver.quit();
 	}

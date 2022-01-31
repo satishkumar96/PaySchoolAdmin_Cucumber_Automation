@@ -24,18 +24,12 @@ public class LoginPageAction {
 		bp.clickElement(lpl.getBackToSignInPage());
 	}
 	
-	public void checkUnPwdDisplay() throws Throwable {
-		boolean username = bp.displayElement(lpl.getUsername());
-		boolean password = bp.displayElement(lpl.getPassword());
-		
-		if(username == true && password == true) {
-			System.out.println("Element Visible");
-		}
-		else
-		{
-			System.out.println("element Not visible");
-		}
-		
+	public boolean checkUnDisplay() throws Throwable {
+		return bp.displayElement(lpl.getUsername());
+	}
+	
+	public boolean checkPwdDisplay() throws Throwable {
+		return bp.displayElement(lpl.getPassword());
 	}
 	
 	public void doLogin(String username, String password) throws Throwable {
