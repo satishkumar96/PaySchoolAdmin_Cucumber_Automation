@@ -1,14 +1,14 @@
 Feature: Validate End to End testing on Home Page
 
-  Scenario Outline: Validate Home Page
-    When username and password field are display
-    And enter "<username>" and "<password>"
-    And click on Login button
-    Then homepage should display
-
-    Examples: 
-      | username  | password |
-      | chimerasa | Test2021 |
+  #Scenario Outline: Validate Home Page
+    #When username and password field are display
+    #And enter "<username>" and "<password>"
+    #And click on Login button
+    #Then homepage should display
+#
+    #Examples: 
+      #| username  | password |
+      #| chimerasa | Test2021 |
 
   Scenario: Verify Home Tab visibility
     Given homepage should display

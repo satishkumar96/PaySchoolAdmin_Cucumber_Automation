@@ -42,4 +42,4 @@ Feature: Validate end to end testing on Admin. Manage fees
     And validate Variable filed
     Then click on next button
     And go to Home Page
-		And perform logout
+#		And perform logout
