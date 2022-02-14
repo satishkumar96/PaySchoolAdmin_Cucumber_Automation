@@ -37,22 +37,19 @@ stages
             failure
             {
                 emailext attachmentsPattern: 'target/test-output/SparkReport/Index.html, target/test output/PdfReport/ExtentPdf.pdf', body: '''Hello Everybody,
-
-The execution of PSA Automation Testing in Dev environment has failed. We are looking into the issue and would re-run the automation job upon rectifying the issue.
+The execution of PSA Automation Testing has failed. We are looking into the issue and would re-run the automation job upon rectifying the issue.
 
 Regards,
-QA Team''', subject: '[$BUILD_STATUS] - $PROJECT_NAME - Build # $BUILD_NUMBER ($BUILD_ID)', to: 'automationwithsatish@gmail.com'
+QA Team''', subject: '[$BUILD_STATUS] - $PROJECT_NAME - Build # $BUILD_NUMBER ($BUILD_ID)', to: 'sk.kumar805@gmail.com'
             }
             
             success 
             {            
                emailext attachmentsPattern: 'target/test-output/SparkReport/Index.html, target/test output/PdfReport/ExtentPdf.pdf', body: '''Hello Everybody,
-
-The automated test execution of PSA Regression Test Cases is completed. Please find the test report in the below ,
-PSC Automation Testing Report - Beta.
+The execution of PSA Automation Testing is completed. Please find the test report in the below ,
 
 Regards,
-QA Team''', subject: '[$BUILD_STATUS] - $PROJECT_NAME - Build # $BUILD_NUMBER ($BUILD_ID)', to: 'deepakd@chimeratechnologies.com, cc:automationwithsatish@gmail.com'
+QA Team''', subject: '[$BUILD_STATUS] - $PROJECT_NAME - Build # $BUILD_NUMBER ($BUILD_ID)', to: 'deepakd@chimeratechnologies.com, cc:sk.kumar805@gmail.com'
                 }
         }
     }
